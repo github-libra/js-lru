@@ -47,4 +47,17 @@ to_remove.remove('john');
 assert.equal(to_remove.size, 0);
 assert.equal(to_remove.head, undefined);
 assert.equal(to_remove.tail, undefined);
+
+//test shift
+var to_shift = new LRUCache(2);
+to_shift.put(1,1);
+to_shift.put(2,1);
+to_shift.put(3,1);
+to_shift.shift();
+assert.equal(to_shift.size, 1);
+to_shift.shift();
+assert.equal(to_shift.size, 0);
+
+console.log('all test pass.');
+
 // If we made it down here, all tests passed. Neat.
